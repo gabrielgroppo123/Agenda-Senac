@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <div style="background-color: black; color: white; height: 20px; display: flex; justify-content: space-between; padding: 0 10px; font-size: 12px; align-items: center;">
+            <span>09:05</span>
+            <div>
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+                <!-- POPUP DE LOGIN -->
+    <div id="popup-login" class="popup hidden">
+        <div class="popup-content">
+            <h3>Entrar</h3>
+            <input type="text" id="login-nome" placeholder="Seu nome" required>
+            <input type="password" id="login-senha" placeholder="Senha" required>
+            <button id="btn-confirmar-login">Entrar</button>
+            <button class="close" onclick="fecharPopupLogin()">Cancelar</button>
+        </div>
+    </div>
+
+        <!-- POPUP SAIR -->
+    <div id="popup-sair" class="popup hidden">
+        <div class="popup-content" style="max-width: 250px; text-align: center;">
+            <h3>Conta</h3>
+            <button id="btn-sair">Sair</button>
+            <button class="close" onclick="fecharPopupSair()">Cancelar</button>
+        </div>
+    </div>
+        <header class="header">
+            <span class="header-title">Menu</span>
+            <div class="header-icons">
+                <a href="#" id="btn-login"><i class="fas fa-user"></i> <span id="login-texto">Login</span></a>
+            </div>
+        </header>
+
+        <main class="content">
+            <img src="logo Agenda Senac.png" alt="Logo da Empresa" style="height: 140px; margin: 40px auto 100px;">
+            <button class="app-button" id="btn-ver-agenda">Ver Agenda</button>
+            <button class="app-button" id="btn-ver-reservas">Minhas Reservas</button>
+            <button class="app-button" id="btn-suporte">Suporte</button>
+        </main>
+
+        <footer class="footer">
+            Versão SP.0.0.0.1
+        </footer>
+    </div>
+    <!-- POPUP DE LOGIN -->
+<div id="popup-login" class="popup hidden">
+    <div class="popup-content">
+        <h3>Entrar</h3>
+
+        <input type="text" id="login-nome" placeholder="Seu nome" required>
+        <input type="password" id="login-senha" placeholder="Senha" required>
+
+        <button id="btn-confirmar-login">Entrar</button>
+        <button class="close" onclick="fecharPopupLogin()">Cancelar</button>
+    </div>
+</div>
+<!-- POPUP SAIR -->
+<div id="popup-sair" class="hidden">
+    <p>Deseja sair?</p>
+    <button id="confirmar-sair">Sair</button>
+    <button onclick="fecharPopupSair()">Cancelar</button>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

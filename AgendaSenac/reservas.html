@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Reservas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Estilos específicos para a tela de Reservas */
+        .reserva-item {
+            background-color: #f7f7f7;
+            border-left: 5px solid var(--cor-principal);
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .reserva-item h3 {
+            margin-top: 0;
+            color: var(--cor-principal);
+            font-size: 1.1em;
+        }
+
+        .reserva-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: var(--cor-texto);
+        }
+
+        .btn-cancelar-reserva {
+            background-color: #CC0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div style="background-color: black; color: white; height: 20px; display: flex; justify-content: space-between; padding: 0 10px; font-size: 12px; align-items: center;">
+            <span>09:05</span>
+            <div>
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+                <!-- POPUP DE LOGIN -->
+    <div id="popup-login" class="popup hidden">
+        <div class="popup-content">
+            <h3>Entrar</h3>
+            <input type="text" id="login-nome" placeholder="Seu nome" required>
+            <input type="password" id="login-senha" placeholder="Senha" required>
+            <button id="btn-confirmar-login">Entrar</button>
+            <button class="close" onclick="fecharPopupLogin()">Cancelar</button>
+        </div>
+    </div>
+
+        <!-- POPUP SAIR -->
+    <div id="popup-sair" class="hidden">
+        <p>Deseja sair?</p>
+        <button id="confirmar-sair">Sair</button>
+        <button onclick="fecharPopupSair()">Cancelar</button>
+    </div>
+
+        <header class="header">
+            <span class="header-title">Reservas</span>
+            <div class="header-icons">
+                <a href="#" id="btn-login"><i class="fas fa-user"></i> Login</a>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="agenda-header">
+                <br>
+                <br>
+                <br>
+                <br>
+                <i class="fas fa-arrow-circle-left back-icon" id="btn-voltar-reservas"></i>
+                <h1 class="agenda-header-title" style="margin-left: -20px;">Minhas Reservas</h1>
+            </div>
+
+            <div class="reservas-list" style="margin-top: 20px; text-align: center;">
+            
+            </div>
+            <p id="no-reservations-msg" style="display: none; color: #999;">Você não tem reservas agendadas.</p>
+        </main>
+
+        <footer class="footer">Versão SP.0.0.0.1</footer>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
